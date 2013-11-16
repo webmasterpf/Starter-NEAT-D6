@@ -1,0 +1,59 @@
+ 
+//
+
+//*Réglage de la grille de Susy - approche mobile-first
+$total-columns: 4;             // nombre de colonnes de la grille de base
+$column-width: 3.70em;            // largeur de chaque colonnes (px,em,%)
+$gutter-width: 0.75em;            // taille de la gouttière entre colonnes (px,em,%)
+$grid-padding: $gutter-width;  // grid-padding equal to gutters
+
+//Réglage du nombre de colonnes pour at-breakpoint() mixin 
+// qui simplifie les media-queries
+$mobile   : 4;
+$tablet   : 10;
+$desktop  : 14;
+
+
+/*¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+----- VARIABLES PROVENCE FORMATION -----
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤*/
+
+
+/*-------- Couleurs charte graphique PF ----*/
+$vert : #ADC91F;
+$violet: #911381;
+$orange : #F29400;
+$orange-fonce: #DE603A;
+$bleu-turquoise: #01ABCF;
+$rouge : #E3001C;
+$rose-fushia : #E30078;
+$jaune : #FAEB0C;
+$gris-clair: #ECECED;
+$gris-clair-moyen : #9898a6;
+$gris-anthracite : #606070;
+$noir: #000000;
+
+// Ici paramétrer les couleurs pour l'annonce défilante
+$color-defilant:#606070;
+$color-defilant-a:#E3001C;
+
+/*¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+----- FONCTIONS PROVENCE FORMATION -----
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤*/
+
+// Create em() for setting font-sizes in pixels.
+@function em($target, $context: $base-font-size) {
+@if $target == 0 { @return 0 }
+@return $target / $context + 0em;
+}
+
+/* ==============================
+  Mixins custom PROVENCE FORMATION
+=================================*/
+
+
+
+/*-------- IMAGES ADAPTABLES -----------*/
+@mixin adaptable-img {
+    max-width: 100%;
+}

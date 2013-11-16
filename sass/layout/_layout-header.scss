@@ -1,0 +1,143 @@
+/*-------------------------------------|
+|       HEADER DU SITE                 |
+|--------------------------------------*/
+
+// Layout du header et de ses parties haute et basse (logique mobile first)
+ //Imbrication à 100% (full nested)
+ #header {
+     .headHaut {//@include span-columns($mobile);
+                .logoHead {  @include span-columns($mobile);
+                img{margin: 0 auto;display: block;}
+                }
+                .menuImg {  @include span-columns($mobile);}
+     }
+     .headBas {@include span-columns($mobile);
+                //@include set-container-width; marche pas
+               .site-slogan{@include span-columns($mobile);}
+               .headSearch{@include span-columns($mobile);}
+               .menuHead{@include span-columns($mobile);}
+     }                
+ 
+@include at-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+ .headHaut {@include span-columns($desktop);
+                .logoHead { @include span-columns(5,$desktop);}
+                .menuImg {  @include span-columns(9 omega,$desktop);}
+     }
+     .headBas {@include span-columns($desktop);
+               .site-slogan{@include span-columns(6,$desktop);}
+               .headSearch{@include span-columns(7 omega,$desktop);}
+               .menuHead{@include span-columns($desktop);}
+     } 
+}
+@include at-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/}
+ }
+
+
+ //Pour le dev, code visuel sur les blocs selon le breakpoint
+// à commenter ou supprimer pour la production
+ 
+#header {
+    .headHaut {
+        .logoHead { }
+        .menuImg {  }
+    }
+    .headBas {background: red;
+              .site-slogan{}
+              .headSearch{}
+              .menuHead{}
+    }                
+}
+@include at-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+    #header {
+        .headHaut {
+            .logoHead { }
+            .menuImg { background: #FFCCFF; }
+        }
+        .headBas {background: #00CC99;
+                  .site-slogan{}
+                  .headSearch{}
+                  .menuHead{}
+        }                
+    }
+}
+/*---- HEADER HAUT ----*/
+ 
+
+
+.logoHead {
+   img {
+    @include adaptable-img;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+.navPicto {
+    border: 0;
+
+    td {
+        border: 0;
+        padding: em(5px);
+    }  
+}
+
+
+/*---- HEADER BAS ----*/
+
+.headBas {
+ //background: $rose-fushia;//Modifier la couleur du fond de la partie basse selon couleur du lycée
+    margin: em(5px) 0 0 0;
+  background: #cfd0d2 image-url ("bg_menu_rp.gif") repeat-x top left;
+}
+
+/*Menu principal haut du header*/
+
+.menuHead {
+  float: none;
+  height: auto;
+  padding: 0;
+  
+}
+
+.headSearch {
+  text-align: right;
+  margin: em(2px) 0 0 0;
+  background: image-url ("bg_recherche.gif") no-repeat left em(5px);
+    
+}
+
+.search {
+ 
+  padding: 0 em(3px) 0 0;
+}
+
+.name-and-slogan {
+
+  vertical-align: bottom;
+  
+}
+
+.site-name {
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  }
+  padding: em(160px) 0 0 em(10px);
+  margin: 0;
+}
+
+.site-slogan {
+  color: white;
+  padding: em(3px) 0 0 em(4px);
+ 
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+/*FIN CSS HEADER*/
+/*****************/

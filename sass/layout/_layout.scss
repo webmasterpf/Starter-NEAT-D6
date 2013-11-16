@@ -1,0 +1,220 @@
+// Importer les fichiers scss partiels (avec _) afin de compiler le
+// fichier css final utile pour le thème
+// Activer compass via 
+// webmaster@vm-server1:~$ compass watch /var/www/drupal6/sites/all/themes/THEMENAMEFOLDER/
+
+
+html {
+ margin: 0;
+ padding: 0;
+}
+
+
+body {	
+	font-family: $TrebuchetFont;
+	
+}
+
+ /*------------------------------------------------------*
+  *--------    CSS BLOCS     						 ----*
+  *------------------------------------------------------*/
+
+/*-- LAYOUT PRINCIPAL --*/
+body #general{
+    //Approche mobile-first,réglage pour mobile
+    @include container;
+    padding-top: 2em;
+    background: transparent;
+
+    #header{@include span-columns($mobile);}
+    #content-global{}
+    #left-content{}
+    #content-inner{}
+    #right-content{}
+    #footer{@include span-columns($mobile);
+            @include background-size;}
+
+    @include at-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+
+        @include set-container-width;
+
+        background: transparent;
+        #header{@include span-columns($desktop);background: seashell;}
+        #content-global{@include span-columns($desktop);}
+        #left-content{@include span-columns(2 alpha,$desktop);}
+        #content-inner{@include span-columns(10,$desktop);}
+        #right-content{@include span-columns(2 omega,$desktop);}
+        #footer{@include span-columns($desktop);
+                @include background-size(auto);
+        }
+
+    }
+    @include at-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
+
+
+        #header{}
+        #content-global{}
+        #left-content{}
+        #content-inner{}
+        #right-content{}
+        #footer{}
+
+    }
+}
+
+//Pour le dev, code visuel sur les blocs selon le breakpoint
+// à commenter ou supprimer pour la production
+
+body #general{
+    //Approche mobile-first,réglage pour mobile
+    @include susy-grid-background;
+    #header{background: tan;}
+    #content-global{}
+    #left-content{}
+    #content-inner{}
+    #right-content{}
+    #footer{background: teal;}
+}   
+@include at-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+    body #general{
+        @include susy-grid-background;
+        
+        #header{background: seashell;}
+        #content-global{}
+        #left-content{background: tomato;}
+        #content-inner{}
+        #right-content{background: violet;}
+        #footer{background: yellowgreen;}
+    }
+}
+@include at-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
+    body #general{
+        @include susy-grid-background;
+        
+        #header{}
+        #content-global{}
+        #left-content{}
+        #content-inner{}
+        #right-content{}
+        #footer{}
+    }
+}
+/////////////////////////////////////////////
+/*Haut de page  HEADER*/
+
+#header{
+	margin:0 auto;
+	padding:0;
+	}
+
+/*Contenu de page  CONTENT */
+
+#content-global {
+	margin:0 auto;
+	background-color:RosyBrown;
+}
+#content-inner,#left-content,#right-content{
+height: 100%;
+}
+/*//////SOUS ENTETE/////*/
+#content-top{
+	margin:0 auto;
+	padding:em(5px);
+	background-color: #999;
+}
+#content-top-node{
+    background-color: #999;
+    margin: 0 auto;
+    padding: em(5px);  
+        }	
+/*/// debut des colonnes ///*/
+#left-content{
+	background-color:#00CC99;
+	left:0px;
+}
+
+/*/// partie de droite ///*/
+#right-content{
+background-color:#FF66CC;
+}
+/*inner content*/
+#content-inner{
+background-color: #CFD0D2;
+}
+/*///    partie du centre   ///*/
+#middle-content{
+	background-color:yellow;
+	padding:em(5px);
+}
+
+
+/*PIED DE CONTENU*/
+#content-bottom{
+background:#C0c0c0;
+
+}
+
+/*Bas de page  FOOTER*/
+
+#footer{
+	margin:0 auto;
+	padding:em(30px) 0;
+	background: wheat image-url("bg_footer.jpg") no-repeat scroll right bottom;
+        
+	text-align: center;
+	color: #FFF;
+       
+        
+}
+#bloc_stats{
+    color:red;
+    margin:0 auto;
+    
+}
+/*--------------------------------------------
+---- LAYOUT POUR PAGE.TPL ET NODE.TPL OVERRIDE
+**********************************************
+-------------- GENERIQUE --------------------*/
+
+/*//////////////////////\\\\\\\\\\\\\\\\\\\\\\
+********** LAYOUT NODE.TPL OVERRIDE **********
+\\\\\\\\\\\\\\\\\\\\\\\//////////////////////*/
+/*//////////////// COLONNE 1 \\\\\\\\\\\\\\\\*/
+#colonne-1{
+    width: em(200px);
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.col1_layout_200_590_200{}
+.col1_layout_330_all{}
+.col1_layout_18_56_25{}
+/*//////////////// COLONNE 2 \\\\\\\\\\\\\\\\*/
+#colonne-2, #middle-content-override{
+    width: em(550px);
+    float: left;
+    margin: 0;
+    padding: 0;
+
+}
+.col2_layout_200_590_200{}
+.col2_layout_330_all{}
+.col2_layout_18_56_25{}
+/*//////////////// COLONNE 3 \\\\\\\\\\\\\\\\*/
+#colonne-3{
+    width: em(200px);
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.col3_layout_200_590_200{}
+.col3_layout_330_all{}
+.col3_layout_18_56_25{}
+/*  PAGE STORY TPL  */
+#middle-content-story{
+    width: 95%;
+    margin: 0 auto;
+}
+.story{
+    
+}

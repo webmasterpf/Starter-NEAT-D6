@@ -32,17 +32,29 @@ Compilation des fichiers scss
 dans le terminal :
 webmaster@vm-server1:~$ compass watch /PATH/TO/THEMENAMEFOLDER/
 
-Usage des mixins de Susy
+Usage des mixins de Bourbon NEAT
 ------------------------
-Dans la logique Mobile first, la div "content" aura 5 colonnes, si c'est un écran de bureau,elle en aura 16 dont
-3 vides (prefix)
-#content {
-  @include span-columns(5);
-  @include at-breakpoint($desktop) {
-    @include span-columns(13, $desktop);
-    @include prefix(3, $desktop);
+<body>
+ <section class="blog">
+  <aside></aside>
+  <article></article>
+ </section>
+</body>
+
+
+
+section.blog {
+  @include outer-container;
+  
+  aside {
+    @include span-columns(4);
+  }
+  
+  article {
+    @include span-columns(8);
   }
 }
+
 
 Ordre et hierarchie des blocs du layout
 -------------------------
