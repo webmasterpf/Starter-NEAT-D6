@@ -9,24 +9,35 @@ Compass va compiler les partiels pour fabriquer cette feuille
 // webmaster@vm-server1:~$ compass watch /var/www/drupal6/sites/all/themes/THEMENAMEFOLDER/
 
 /*---- VERSIONS ----
---- 2013-11-05 ---
+--- 2013-11-16 ---
+bourbon (3.1.8)
 compass (0.12.2)
-sass (3.2.12)
-susy (1.0.9)
+compass-normalize (1.4.3)
+compass-recipes (0.3.0)
 modular-scale (1.0.6)
+neat (1.4.0)
+sass (3.2.12)
 ---------------------*/
 
 // Import de Compass
 @import "compass";
 
-//Import des plugins de Compass
+//Grid system
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import 'modular-scale';
-//@import "recipes";
 
-// Import des partiels compass
-@import "compass/reset";
+//Import des plugins de Compass (grille,outils,mixins..)
+//https://github.com/chriseppstein/compass/wiki/compass-plugins
+
+@import 'modular-scale';
+@import "recipes";
+@import "toolkit";
+
+
+// Import du reset des règles (au choix)
+//@import "compass/reset";
+@import "normalize";
+
 
 
 // Import des styles et polices Provence Formation
