@@ -7,7 +7,7 @@
 //Vue diaporama homepage
 // Classe ajoutée dans views sur le champ image à afficher
 .vue-diapo-hp-img{
-    @include span-columns($mobile);
+    @include span-columns(4);
     img{@include adaptable-img;}
 }
 #views_slideshow_singleframe_main_diaporama_homepage-block_1{

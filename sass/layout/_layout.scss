@@ -22,34 +22,33 @@ body {
 /*-- LAYOUT PRINCIPAL --*/
 body #general{
     //Approche mobile-first,réglage pour mobile
-    @include container;
+    @include outer-container;
     padding-top: 2em;
     background: transparent;
 
-    #header{@include span-columns($mobile);}
-    #content-global{}
+    #header{@include span-columns(4);}
+    #content-global{@include span-columns(2);}
     #left-content{}
     #content-inner{}
     #right-content{}
-    #footer{@include span-columns($mobile);
+    #footer{@include span-columns(4);
             @include background-size;}
 
-    @include at-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+    @include breakpoint ($desktop) {/*    //Dimensions pour les pc*/
 
-        @include set-container-width;
-
+       
         background: transparent;
-        #header{@include span-columns($desktop);background: seashell;}
-        #content-global{@include span-columns($desktop);}
-        #left-content{@include span-columns(2 alpha,$desktop);}
-        #content-inner{@include span-columns(10,$desktop);}
-        #right-content{@include span-columns(2 omega,$desktop);}
-        #footer{@include span-columns($desktop);
+        #header{@include span-columns(12);}
+        #content-global{@include span-columns(12);}
+        #left-content{@include span-columns(2 of 12);}
+        #content-inner{@include span-columns(8 of 12);}
+        #right-content{@include span-columns(2 of 12);}
+        #footer{@include span-columns(12);
                 @include background-size(auto);
         }
 
     }
-    @include at-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
+    @include breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
 
 
         #header{}
@@ -67,7 +66,7 @@ body #general{
 
 body #general{
     //Approche mobile-first,réglage pour mobile
-    @include susy-grid-background;
+    
     #header{background: tan;}
     #content-global{}
     #left-content{}
@@ -75,9 +74,9 @@ body #general{
     #right-content{}
     #footer{background: teal;}
 }   
-@include at-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+@include breakpoint($desktop) {/*    //Dimensions pour les pc*/
     body #general{
-        @include susy-grid-background;
+        
         
         #header{background: seashell;}
         #content-global{}
@@ -87,9 +86,9 @@ body #general{
         #footer{background: yellowgreen;}
     }
 }
-@include at-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
+@include breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
     body #general{
-        @include susy-grid-background;
+        
         
         #header{}
         #content-global{}
@@ -158,7 +157,7 @@ background:#C0c0c0;
 
 #footer{
 	margin:0 auto;
-	padding:em(30px) 0;
+	padding:em(30) 0;
 	background: wheat image-url("bg_footer.jpg") no-repeat scroll right bottom;
         
 	text-align: center;

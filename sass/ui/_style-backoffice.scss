@@ -17,7 +17,7 @@
     color: #EB512F;
     text-decoration: none;
     background: white;
-    padding: 0 em(2px);
+    padding: 0 em(2);
     &:hover {
       background: #EB512F;
       color: white;
@@ -38,8 +38,8 @@
 
 #user-login {
   margin: auto;
-  width: em(450px);
-  padding: em(10px) 0;
+  width: em(450);
+  padding: em(10) 0;
 }
 
 /*Workspace*/
