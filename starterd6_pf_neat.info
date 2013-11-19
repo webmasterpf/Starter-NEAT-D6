@@ -2,7 +2,7 @@
 ;Ajouter les regions utiles dans la liste ci apres, idem pour les CSS.
 ;Changer le screenshot du site pour interface admin
 ;
-name = SASS Template for PF
+name = BOURBON NEAT Template for PF
 description = Gabarit SCSS /HTML5 pour Drupal 6. Thème RWD utilisant Compass, Bourbon Neat
 version = VERSION
 core = 6.x
@@ -15,6 +15,7 @@ scripts[] = js/tinynav.min.js
 scripts[] = js/jquery.navobile.min.js
 scripts[] = js/jquery.jpanelmenu.min.js
 
+stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/application.css
 
 ; CSS pour utiliser NiceMenu

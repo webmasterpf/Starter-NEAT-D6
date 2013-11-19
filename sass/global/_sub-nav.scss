@@ -9,7 +9,7 @@ aside.navPicto{
             img{@include adaptable-img;}
             a {
                 // vertical alignment
-                margin: 0 em(1px);
+                margin: 0 em(1);
                 border: 0;
                 font-family: $AristaFont;
                 color: $gris-anthracite;

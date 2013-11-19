@@ -119,13 +119,13 @@ height: 100%;
 /*//////SOUS ENTETE/////*/
 #content-top{
 	margin:0 auto;
-	padding:em(5px);
+	padding:em(5);
 	background-color: #999;
 }
 #content-top-node{
     background-color: #999;
     margin: 0 auto;
-    padding: em(5px);  
+    padding: em(5);  
         }	
 /*/// debut des colonnes ///*/
 #left-content{
@@ -144,7 +144,7 @@ background-color: #CFD0D2;
 /*///    partie du centre   ///*/
 #middle-content{
 	background-color:yellow;
-	padding:em(5px);
+	padding:em(5);
 }
 
 
@@ -181,7 +181,7 @@ background:#C0c0c0;
 \\\\\\\\\\\\\\\\\\\\\\\//////////////////////*/
 /*//////////////// COLONNE 1 \\\\\\\\\\\\\\\\*/
 #colonne-1{
-    width: em(200px);
+    width: em(200);
     float: left;
     margin: 0;
     padding: 0;
@@ -191,7 +191,7 @@ background:#C0c0c0;
 .col1_layout_18_56_25{}
 /*//////////////// COLONNE 2 \\\\\\\\\\\\\\\\*/
 #colonne-2, #middle-content-override{
-    width: em(550px);
+    width: em(550);
     float: left;
     margin: 0;
     padding: 0;
@@ -202,7 +202,7 @@ background:#C0c0c0;
 .col2_layout_18_56_25{}
 /*//////////////// COLONNE 3 \\\\\\\\\\\\\\\\*/
 #colonne-3{
-    width: em(200px);
+    width: em(200);
     float: left;
     margin: 0;
     padding: 0;

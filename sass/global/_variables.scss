@@ -1,17 +1,24 @@
  
 //
 
-//*Réglage de la grille de Susy - approche mobile-first
-$total-columns: 4;             // nombre de colonnes de la grille de base
-$column-width: 3.70em;            // largeur de chaque colonnes (px,em,%)
-$gutter-width: 0.75em;            // taille de la gouttière entre colonnes (px,em,%)
-$grid-padding: $gutter-width;  // grid-padding equal to gutters
+//*Réglage de la grille de Bourbon Neat
+$grid-columns:12;            // nombre de colonnes de la grille de base,default: 12
+$max-width: em(990);//largeur de colonne,default: em(1088)
 
-//Réglage du nombre de colonnes pour at-breakpoint() mixin 
+
+//Réglage du nombre de colonnes pour breakpoint() mixin 
 // qui simplifie les media-queries
-$mobile   : 4;
-$tablet   : 10;
-$desktop  : 14;
+//http://stackoverflow.com/questions/15805750/breakpoints-using-bourbon-neat-grid
+$mobile-size:em(320);
+$tablet-size:em(720);
+$desktop-size:em(960);
+$largedesktop-size:em(1050);
+
+// Bourbon Neat Breakpoints - règle le nombre de colonnes
+$mobile: new-breakpoint(min-width $mobile-size 4);
+$tablet: new-breakpoint(min-width $tablet-size 8);
+$desktop: new-breakpoint(min-width $desktop-size 12);
+$largedesktop: new-breakpoint(min-width $largedesktop-size 16);
 
 
 /*¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤

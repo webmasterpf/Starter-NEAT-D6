@@ -20,25 +20,27 @@ $TrebuchetFont : Trebuchet MS, Verdana, Helvetica, sans-serif;
 /*====================================|
 ==             CSS H                ==|
 =====================================*/
+//Attention,avec Bourbon neat pas besoin de fonction pour convertir en em !!
+// Par contre la notation change !!! pas de px
   
 h1, .h1 {
 	margin: 0;
 	padding: 0;
 	color:#000;
-	font-size: em(20px);
+	font-size: em(20);
 }
   
 h2, .h2 {
 	margin: 0;
 	padding: 0;
 	color:#000;
-	font-size: em(18px);
+	font-size: em(18);
 }
 h2.title{
-	margin: 5px;
+	margin: 5;
 	padding: 0;
 	color:#000;
-	font-size: em(18px);
+	font-size: em(18);
 
  a{
 	color:#EF1D1D;
@@ -48,31 +50,31 @@ h3, .h3{
 	margin: 0;
 	padding: 0;
 	color:#000;
-	font-size: em(16px);
+	font-size: em(16);
 }
 h4, .h4{
 	margin: 0;
 	padding: 0;
 	color:#000;
-	font-size: em(14px);
+	font-size: em(14);
 }
 h5, .h5 {
 	margin: 0;
 	padding: 0;
 	color:#000;
-	font-size: em(12px);
+	font-size: em(12);
 }
 h6, .h6 {
 	margin: 0;
 	padding: 0;
 	color:#000;
-	font-size: em(10px);
+	font-size: em(10);
 }
 /*---------------- TITRES -----------------------*/
 @mixin titre-page ($margin : 0.1em){
      font-size : x-large;
      margin: $margin;
-     line-height: em(30px);
+     line-height: em(30);
      
 }
 /*------------ PARAGRAPHES ---------------*/

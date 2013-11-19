@@ -24,19 +24,20 @@ sass (3.2.12)
 
 //Grid system
 @import "bourbon/bourbon";
+@import "global/variables";
 @import "neat/neat";
 
 //Import des plugins de Compass (grille,outils,mixins..)
 //https://github.com/chriseppstein/compass/wiki/compass-plugins
 
-@import 'modular-scale';
+//@import "modular-scale";
 @import "recipes";
 @import "toolkit";
 
 
 // Import du reset des règles (au choix)
+// utiliser normalize directement depuis .info drupal
 //@import "compass/reset";
-@import "normalize";
 
 
 
