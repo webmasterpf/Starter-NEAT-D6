@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title><?php print $head_title; ?></title>
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- stats-SEO -->
     <meta name="google-site-verification" content="" />
     <meta name="y_key" content=""/>
