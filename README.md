@@ -58,7 +58,7 @@ section.blog {
 
 Ordre et hierarchie des blocs du layout
 -------------------------
-
+<pre>
 #general
     #header
         #header-inner
@@ -79,7 +79,7 @@ Ordre et hierarchie des blocs du layout
         #right-content
     #footer
     #bloc_stats
-
+</pre>
  Breakpoints pour Bourbon Neat
 ----------------------------------
  @include breakpoint ($mobile){}
