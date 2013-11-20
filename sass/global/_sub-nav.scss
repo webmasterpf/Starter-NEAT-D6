@@ -1,13 +1,18 @@
 //Navigation horizontale secondaire, responsive pour mobile
 
+//Disposition en blocs successifs
 aside.navPicto{
-     ul.horizontal-nav {
-        @include horizontal-list;
-        li {
-            padding: 0;
-            @include span-columns(1);
+    ul.horizontal-nav {
+        padding:1.4em;
+        @include horizontal-list;//compass
+        @include row(table);//bourbon-neat
+        li.block {
+            @include span-columns(2);//bourbon-neat
+            @include omega(6n);//bourbon-neat
+            
             img{@include adaptable-img;}
             a {
+                
                 // vertical alignment
                 margin: 0 em(1);
                 border: 0;
@@ -16,12 +21,13 @@ aside.navPicto{
                 text-decoration: none;
                 display: block;
                 @include adjust-font-size-to(20px);
+                text-align:$direction;
                 &:hover {
                     color: $orange-fonce;
-
 
                 }
             }
         }
     }
 }
+

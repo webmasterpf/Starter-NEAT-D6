@@ -69,17 +69,43 @@
 }
 
 
-/*---- HEADER HAUT ----*/
+/*---- STYLE HEADER ----*/
  
-
-
-.logoHead {
-   img {
-    @include adaptable-img;
-    padding: 0;
-    margin: 0;
-  }
+#header {
+    @include breakpoint ($mobile){
+        .headHaut {
+            .logoHead { img {@include adaptable-img;}
+            }
+            .menuImg {  }
+        }
+        .headBas {
+            .site-slogan{}
+            .headSearch{}
+            .menuHead{}
+        }                
+    }
+    @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
+        .headHaut {
+            .logoHead {img {@include adaptable-img;}
+            }
+            .menuImg { 
+            }
+        }
+        .headBas {
+            //background: $rose-fushia;//Modifier la couleur du fond de la partie basse selon couleur du lycée
+            margin: em(5) 0 0 0;
+            background: #cfd0d2 image-url ("bg_menu_rp.gif") repeat-x top left;
+            .site-slogan{           }
+            .headSearch{text-align: right;
+                        margin: em(2) 0 0 0;
+                        background: image-url ("bg_recherche.gif") no-repeat left em(5);       
+            }
+            .menuHead{}
+        }                
+    }
 }
+
+
 
 
 .navPicto {
@@ -92,14 +118,6 @@
 }
 
 
-/*---- HEADER BAS ----*/
-
-.headBas {
- //background: $rose-fushia;//Modifier la couleur du fond de la partie basse selon couleur du lycée
-    margin: em(5) 0 0 0;
-  background: #cfd0d2 image-url ("bg_menu_rp.gif") repeat-x top left;
-}
-
 /*Menu principal haut du header*/
 
 .menuHead {
@@ -109,12 +127,6 @@
   
 }
 
-.headSearch {
-  text-align: right;
-  margin: em(2) 0 0 0;
-  background: image-url ("bg_recherche.gif") no-repeat left em(5);
-    
-}
 
 .search {
  
