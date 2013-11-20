@@ -3,12 +3,24 @@
 |par AJOUT ou OVERRIDE des classes/IDs |
 |--------------------------------------*/
 
+//Breakpoints pour Bourbon Neat
+// @include breakpoint ($mobile){}
+// @include breakpoint ($desktop){}
+// @include breakpoint ($tablet){}
 
 //Vue diaporama homepage
 // Classe ajoutée dans views sur le champ image à afficher
-.vue-diapo-hp-img{
-    @include span-columns(4);
+.vue-diapo-hp-img{    
     img{@include adaptable-img;}
+    @include breakpoint ($mobile){
+        @include span-columns(4);
+    }
+    @include breakpoint ($desktop){
+        @include span-columns(12);
+    }
+    @include breakpoint ($tablet){
+        @include span-columns(8);
+    }
 }
 #views_slideshow_singleframe_main_diaporama_homepage-block_1{
     padding: 0;

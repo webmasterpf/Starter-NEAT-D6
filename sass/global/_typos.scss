@@ -86,7 +86,7 @@ h6, .h6 {
     #content-inner{}
     #right-content{}
     #footer{@include adjust-font-size-to(10px);
-        p{@include trailer();}
+        p{@include trailer();text-align: $direction;}
     }
 }
 .HPBasGauche, .HPBasDroit {

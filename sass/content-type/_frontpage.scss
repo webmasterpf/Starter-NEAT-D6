@@ -10,13 +10,14 @@
 //Code imbriqué à 100%
 #mainContent {
     background:transparent image-url ("bg_content_etoile.gif") no-repeat left bottom;
-       
-    .HPDiapo{@include span-columns(4);
-             overflow : hidden;}
-    .HPBasGauche{}
-    .HPBasDroit{}
-}
-
+/*    @include outer-container;*/
+    
+    @include breakpoint($mobile){
+        .HPDiapo{@include span-columns(4); overflow : hidden;}
+        .HPBasGauche{@include span-columns(2);}
+        .HPBasDroit{@include span-columns(2);}
+    }
+   
     @include breakpoint($desktop) {/*    //Dimensions pour les pc - 960px*/
     //Taille du conteneur du groupe    
        
@@ -27,20 +28,21 @@
   
     @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
         //Taille du conteneur du groupe
-     
+
         .HPDiapo{ overflow : hidden;}
         .HPBasGauche{}
         .HPBasDroit{}
-    
+
+    }
 }
 //Pour le dev, code visuel sur les blocs selon le breakpoint
 // à commenter ou supprimer pour la production
 #mainContent {
-        
+   @include breakpoint($mobile){     
     .HPDiapo{}
-    .HPBasGauche{background: #C8D215;}
+    .HPBasGauche{background: greenyellow;}
     .HPBasDroit{background: salmon;}
-   
+   }
   
     @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
     .HPDiapo{}
@@ -51,7 +53,7 @@
     @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
         .HPDiapo{}
     .HPBasGauche{background: #C8D215;}
-    .HPBasDroit{background: salmon;}
+    .HPBasDroit{background: tomato;}
     }
 }
 /********************/

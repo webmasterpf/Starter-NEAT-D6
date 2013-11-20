@@ -79,3 +79,9 @@ Ordre et hierarchie des blocs du layout
         #right-content
     #footer
     #bloc_stats
+
+ Breakpoints pour Bourbon Neat
+----------------------------------
+ @include breakpoint ($mobile){}
+ @include breakpoint ($desktop){}
+ @include breakpoint ($tablet){}

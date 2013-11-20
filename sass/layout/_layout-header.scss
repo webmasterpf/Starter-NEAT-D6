@@ -5,30 +5,33 @@
 // Layout du header et de ses parties haute et basse (logique mobile first)
  //Imbrication à 100% (full nested)
 #header {
-     .headHaut {//@include span-columns($mobile);
+    @include breakpoint ($mobile){
+     .headHaut {
                 .logoHead {  @include span-columns(4);
                 img{margin: 0 auto;display: block;}
                 }
                 .menuImg {  @include span-columns(4);}
      }
      .headBas {@include span-columns(4);
-                //@include set-container-width; marche pas
+                
                .site-slogan{@include span-columns(4);}
                .headSearch{@include span-columns(4);}
                .menuHead{@include span-columns(4);}
      }                
-  
-@include breakpoint($desktop) {/*    //Dimensions pour les pc - 1000px*/
- .headHaut {@include span-columns(12);
-                .logoHead { @include span-columns(4);}
-                .menuImg {  @include span-columns(8);}
-     }
-     .headBas {@include span-columns(12);
-               .site-slogan{@include span-columns(5);}
-               .headSearch{@include span-columns(7);}
-               .menuHead{@include span-columns(12);}
-     } 
-}
+  }
+  @include breakpoint($desktop) {/*    //Dimensions pour les pc - 1000px*/
+      .headHaut {
+          @include span-columns(12);
+          .logoHead { @include span-columns(4 of 12);}
+          .menuImg {  @include span-columns(8 of 12);@include omega();}
+      }
+      .headBas {
+          @include span-columns(12);
+          .site-slogan{@include span-columns(4 of 12);@include shift(0.3);}
+          .headSearch{@include span-columns(7 of 12);@include omega();}
+          .menuHead{@include span-columns(12);}
+      } 
+  }
 @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/}
  }
 
@@ -37,30 +40,35 @@
 // à commenter ou supprimer pour la production
  
 #header {
-    .headHaut {
-        .logoHead { }
-        .menuImg {  }
-    }
-    .headBas {background: red;
-              .site-slogan{}
-              .headSearch{}
-              .menuHead{}
-    }                
-}
-
-@include breakpoint($desktop) {/*    //Dimensions pour les pc*/
-    #header {
+    @include breakpoint ($mobile){
         .headHaut {
             .logoHead { }
-            .menuImg { background: #FFCCFF; }
+            .menuImg { background: darkorange; }
         }
-        .headBas {background: #00CC99;
+        .headBas {@include span-columns(4);background: red;
                   .site-slogan{}
                   .headSearch{}
                   .menuHead{}
         }                
     }
+    @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
+
+        .headHaut {
+            .logoHead {
+            }
+            .menuImg { 
+                background: #FFCCFF; }
+        }
+        .headBas {
+            background: #00CC99;
+            .site-slogan{           }
+            .headSearch{            }
+            .menuHead{}
+        }                
+    }
 }
+
+
 /*---- HEADER HAUT ----*/
  
 

@@ -1,0 +1,38 @@
+/*-------------------------------------|
+|       FOOTER DU SITE                 |
+|--------------------------------------*/
+
+//Breakpoints pour Bourbon Neat
+// @include breakpoint ($mobile){}
+// @include breakpoint ($desktop){}
+// @include breakpoint ($tablet){}
+
+#footer{
+    margin:0 auto;
+    padding:em(30) 0;
+    background: image-url("bg_footer.jpg") no-repeat scroll right bottom;
+    color: #FFF;
+    p{@include box-sizing(border-box);
+    }
+    a {
+        color: #FFF;
+        text-decoration: none;
+        &:hover {
+            color: #545665;
+        }
+    }
+    @include breakpoint ($mobile){
+         @include background-size;
+    }
+    @include breakpoint ($desktop){
+ @include background-size(auto);
+    }
+    @include breakpoint ($tablet){}
+}
+/*Bas de page  FOOTER*/
+
+
+#bloc_stats{
+    color:red;
+        
+}

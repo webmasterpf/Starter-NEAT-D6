@@ -3,10 +3,10 @@
 
 //*Réglage de la grille de Bourbon Neat
 
-$grid-columns:12;            // nombre de colonnes de la grille de base,default: 12
-$max-width: em(990);//largeur de colonne,default: em(1088)
-$column: em(90); //default
-$gutter: em(30); //default
+//$grid-columns:12;            // nombre de colonnes de la grille de base,default: 12
+$max-width: em(990); //largeur de colonne,default: em(1088)
+//$column: em(90); //default
+//$gutter: em(30); //default
 
 //Affichage de la grille pour le dev
 $visual-grid:true;
@@ -69,3 +69,10 @@ $color-defilant-a:#E3001C;
 @mixin adaptable-img {
     max-width: 100%;
 }
+
+/*------- POSITION AVEC COMPASS --------*/
+$direction: left;
+$opposite: opposite-position($direction); /* Outputs "right" */
+
+$position: top right;
+$opposite: opposite-position($position); /* Outputs "bottom left" */
